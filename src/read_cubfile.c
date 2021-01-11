@@ -6,7 +6,7 @@
 /*   By: kkikuchi <kkikuchi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 20:28:54 by yohlee            #+#    #+#             */
-/*   Updated: 2021/01/12 01:48:46 by kikuchika        ###   ########.fr       */
+/*   Updated: 2021/01/12 02:37:08 by kikuchika        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static void		store(t_data *data, char *line, int *map_flag)
 
 	if (!(str = ft_split(line, ' ')))
 		error("Not good format");
-	if (*map_flag == 1 && (*line == '\0' || ft_isdigit(line[0]) == 0))
+	if (*map_flag == 1 && (*line == '\0' || int_filter(str[0]) == 0))
 		error("store:invalid map format");
 	if (str[0] != NULL)
 		store_map(data, str, line, map_flag);
