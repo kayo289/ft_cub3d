@@ -6,7 +6,7 @@
 /*   By: kkikuchi <kkikuchi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 21:24:46 by kkikuchi          #+#    #+#             */
-/*   Updated: 2021/01/06 21:31:21 by kkikuchi         ###   ########.fr       */
+/*   Updated: 2021/01/12 04:17:40 by kikuchika        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,13 @@ static void		sub_load_image(int *addr, t_img *img)
 	}
 }
 
-int				*load_img(t_data *info, char **str, char *line, int *i)
+int				*load_img(t_data *info, char **str, int j, int *i)
 {
-	static int	j;
 	t_img		img;
 	int			*addr;
 
 	(*i)++;
-	if (str[2] || line[0] == ' ')
+	if (str[2] || !str[1])
 		error("load_img:invalid element");
 	if (open(str[1], O_RDONLY) < 0)
 		error("load_img: invalid path");
@@ -49,7 +48,7 @@ int				*load_img(t_data *info, char **str, char *line, int *i)
 	if (!(addr = (int *)malloc(sizeof(int) * (img.img_w * img.img_h))))
 		exit(1);
 	info->tex[j].w = img.img_w;
-	info->tex[j++].h = img.img_h;
+	info->tex[j].h = img.img_h;
 	sub_load_image(addr, &img);
 	mlx_destroy_image(info->mlx, img.img);
 	return (addr);

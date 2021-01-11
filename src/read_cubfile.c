@@ -6,7 +6,7 @@
 /*   By: kkikuchi <kkikuchi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 20:28:54 by yohlee            #+#    #+#             */
-/*   Updated: 2021/01/12 02:37:08 by kikuchika        ###   ########.fr       */
+/*   Updated: 2021/01/12 04:12:11 by kikuchika        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ void			store_map(t_data *info, char **str,
 	if (!ft_strncmp(str[0], "R", 2) && str[0][1] == 0)
 		load_win(info, str, &i, line);
 	else if (!ft_strncmp(str[0], "NO", 3) && str[0][2] == 0)
-		info->tex[0].addr = load_img(info, str, line, &i);
+		info->tex[0].addr = load_img(info, str, 0, &i);
 	else if (!ft_strncmp(str[0], "EA", 3) && str[0][2] == 0)
-		info->tex[1].addr = load_img(info, str, line, &i);
+		info->tex[1].addr = load_img(info, str, 1, &i);
 	else if (!ft_strncmp(str[0], "SO", 3) && str[0][2] == 0)
-		info->tex[2].addr = load_img(info, str, line, &i);
+		info->tex[2].addr = load_img(info, str, 2, &i);
 	else if (!ft_strncmp(str[0], "WE", 3) && str[0][2] == 0)
-		info->tex[3].addr = load_img(info, str, line, &i);
+		info->tex[3].addr = load_img(info, str, 3, &i);
 	else if (!ft_strncmp(str[0], "S", 1) && str[0][1] == 0)
-		info->tex[4].addr = load_img(info, str, line, &i);
+		info->tex[4].addr = load_img(info, str, 4, &i);
 	else if (!ft_strncmp(str[0], "F", 1) && str[0][1] == 0)
 		info->color[0] = load_color(str, &i, line);
 	else if (!ft_strncmp(str[0], "C", 1) && str[0][1] == 0)

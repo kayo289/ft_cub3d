@@ -6,7 +6,7 @@
 /*   By: kkikuchi <kkikuchi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:56:51 by kkikuchi          #+#    #+#             */
-/*   Updated: 2021/01/11 21:07:58 by kikuchika        ###   ########.fr       */
+/*   Updated: 2021/01/12 04:16:04 by kikuchika        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,7 +199,7 @@ void				sprite_casting(t_data *info);
 void				wall_casting(t_data *info);
 void				draw_flor(t_data *info);
 void				sort_order(t_data *info);
-int					*load_img(t_data *info, char **str, char *line, int *i);
+int					*load_img(t_data *info, char **str, int j, int *i);
 uint32_t			load_color(char **str, int *i, char *line);
 void				free_str(char **map);
 int					int_filter(char *s);
