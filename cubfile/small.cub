@@ -1,0 +1,13 @@
+R 680 540
+EA ./pics/higashi.xpm
+C 180,200,220
+SO ./pics/minami.xpm
+WE ./pics/nishi.xpm
+
+S ./pics/barrel.xpm
+NO ./pics/kita.xpm
+F 0,140,0
+
+ 1
+1E1
+111
