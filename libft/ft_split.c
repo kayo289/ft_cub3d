@@ -6,7 +6,7 @@
 /*   By: kkikuchi <kkikuchi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 13:02:08 by kkikuchi          #+#    #+#             */
-/*   Updated: 2021/01/11 22:53:54 by kikuchika        ###   ########.fr       */
+/*   Updated: 2021/01/12 01:48:59 by kikuchika        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ char				**ft_split(const char *s, char c)
 		}
 		s++;
 	}
-	printf("i:%d\n",i);
 	ans[i] = NULL;
 	return (ans);
 }

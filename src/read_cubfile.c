@@ -6,7 +6,7 @@
 /*   By: kkikuchi <kkikuchi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 20:28:54 by yohlee            #+#    #+#             */
-/*   Updated: 2021/01/12 01:45:38 by kikuchika        ###   ########.fr       */
+/*   Updated: 2021/01/12 01:48:46 by kikuchika        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ void			read_cubfile(t_data *data, char *filename)
 	line = NULL;
 	while (0 < (result = get_next_line(fd, &line)))
 	{
-		printf("line:[%s]\n",line);
 		store(data, line, &map_flag);
 		free(line);
 		line = NULL;
