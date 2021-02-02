@@ -83,6 +83,7 @@ static int			get_line(int fd, char *buf, char **line)
 	if (len == 0)
 		return ((**line == '\0') ? END : SUCESS);
 	return (get_line(fd, buf, line));
+	// return (len == 0 ? END : get_line(buf, line,fd));
 }
 
 int					get_next_line(int fd, char **line)
